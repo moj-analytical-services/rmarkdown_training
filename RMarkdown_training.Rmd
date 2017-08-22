@@ -1,0 +1,42 @@
+---
+title: "Air passengers"
+author: "Vicky Hughes"
+date: "22/08/2017"
+output:
+  word_document:
+    reference_docx: mystyles.docx
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readr)
+library(ggplot2)
+library(dplyr)
+
+crimedata <- read_csv("crimedata.csv")
+```
+
+# Trend over time
+Over time, the number of crimes has changed.
+
+```{r echo = FALSE, fig.height = 3, fig.width = 6}
+ggplot(crimedata, aes(year, crimes)) + geom_line() +
+  expand_limits(y=0)
+```
+
+# Key figures
+```{r echo = FALSE}
+maxcrimes <- max(crimedata$crimes)
+mincrimes <- min(crimedata$crimes)
+```
+
+The minimum number of passangers was `r mincrimes` and the maximum was `r maxcrimes`.
+
+```{r echo = FALSE}
+crimedata <- arrange(crimedata, year)
+
+latestyear <- last(crimedata$year)
+latestcrimes <- last(crimedata$crimes)
+```
+
+In the latest year (`r latestyear`) there were `r latestcrimes` crimes.
