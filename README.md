@@ -69,5 +69,11 @@ The document you have doesn’t quite look like our bulletins do. Rather than do
     *reference_docx: mystyles.docx*
 27. Click ‘Knit’. You should now have a document with the right fonts, and a header which looks more like the JSAS bulletins.
 
+
+The last thing we’ll look at is what you’d do if you had new data, for example if an error got fixed, or if you’re producing the next quarter’s bulletin. "crime2.csv" has an extra row/year of data.
+
+28. Change the data source in your setup chunk to “crime2.csv”.
+29. Click Knit. You’ll see the values have been updated!
+
 A useful cheatsheet:
 https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf
