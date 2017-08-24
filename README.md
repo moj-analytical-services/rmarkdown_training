@@ -50,7 +50,7 @@ When you knit, this will save those two values under those names.
 
 We’re more interested in finding out what the latest value is. We’ll use a package called dplyr to get a function called last(), which gets the last value in a table.
 
-21. Create a new code chunk, remember *echo=FALSE*.
+21. Create a new code chunk, remember *echo=FALSE*. In your setup chunk at the top, type *library(dplyr)*.
 22. Arrange crime data by year: *crimedata <- arrange(crimedata, year)*
 23. Get the latest year and the latest value:
 
