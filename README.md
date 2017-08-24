@@ -19,14 +19,14 @@ You’ll see there are two different types of section in the file, an example ha
 
 3. Save the RMD file in the folder you have put the data in (or where you've cloned this repo).
 4. Delete everything below the first code chunk (the ‘setup’ chunk) so we can start our own document.
-5. We’re going to install a package called readr. One of the best things about R is the collection of packages that people across the world have made: groups of functions that you can download and use yourself. Readr is used for reading in files, in our case we’ll use it to get the csv.
-6. In the setup chunk, type *crimes <- read_csv(“crimes.csv”)*. This will load the data when we create our output. We have assigned it to the name ‘crimes’.
+5. We’re going to install a package called readr. One of the best things about R is the collection of packages that people across the world have made: groups of functions that you can download and use yourself. Readr is used for reading in files, in our case we’ll use it to get the csv. In the setup chunk, type *library(readr)*. If you get an error, run *install.packages("readr")* in the console
+6. In the setup chunk, type *crimedata <- read_csv(“crimes.csv”)*. This will load the data when we create our output. We have assigned it to the name ‘crimes’. If you want to test a chunk, click the green play button at the top right of it. In this case, clicking that means you'll see 'crimes' appear in your environment
 7. Let’s write a chapter. You can create a heading by putting # before some text. Let’s make a chapter by writing *# Trend over time*
 8. Let’s see what our output document looks like. If you click “Knit”, it will run everything in your file and create a Word document for you. Open/download this to have a look: you should have a title, name and date, followed by the heading you’ve just made.
 9. Write some normal text below your heading, for example *over time, the number of crimes has changed.*
 10. Let’s add a chart to show the trend. You can create a new code chunk by typing CTRL+ALT+I (or clicking Insert -> R). After where it says r, type *echo=FALSE* to prevent the code appearing in your output document.
 11. We’ll use another popular package to make a chart. In your setup chunk, type *library(ggplot2)*.
-12. Go back to your new chunk at the bottom. Type *ggplot(crimes, aes(year, crimes)) + geom_point()*. This tells ggplot which data (crimes) to use, and which variables (year, crimes) to plot, and how to plot them (line).
+12. Go back to your new chunk at the bottom. Type *ggplot(crimedata, aes(year, crimes)) + geom_point()*. This tells ggplot which data (crimedata) to use, and which variables (year, crimes) to plot, and how to plot them (line). (If you don't want to use ggplot2, you can just use plot(crimedata)).
 13. Try knitting your document again. You should see the text and chart you’ve just added.
 14. You’ll notice that the y axis doesn’t start at 0! Let’s fix that. Add  *+ expand_limits(y=0)* to your ggplot line. Knit again and you’ll see the axis now starts at 0.
 15. You’ll also notice that the graph is quite large. You can edit the size at the start of the chunk within the curly braces, type: *fig.height = 3, fig.width = 6*
