@@ -1,0 +1,31 @@
+---
+title: "Crime stats"
+author: "Vicky Hughes"
+date: "24/08/2017"
+output:
+  word_document:
+    reference_docx: mystyles.docx
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readr)
+
+crimes <- read_csv("crimedata.csv")
+```
+
+# Trend over time
+Over time, crime has changed.
+
+```{r echo=FALSE, fig.width = 4, fig.height = 3}
+plot(crimes)
+```
+
+# Key figures
+```{r include=FALSE}
+maxcrimes <- max(crimes$crimes)
+library(dplyr)
+latestcrimes <- last(crimes$crimes)
+```
+
+The maximum number of crimes was `r maxcrimes`. The latest number was `r latestcrimes`.
