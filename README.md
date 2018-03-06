@@ -13,7 +13,7 @@ This software gives a more user friendly way of creating work in R, you can see:
 
 You’ll notice you could have chosen PDF or HTML, and may want to in future, but for now use Word as this is the format most stats bulletins are in.
 
-You should now have a file open called Untitled.RMD. We’re going to edit this and create a pretend statistics publication.
+You should now have a file open. We’re going to edit this and create a pretend statistics publication.
 
 If you look at the top of the file you’ve opened there is something called a YAML header. This contains the information you provided when creating the document. If you changed your mind and wanted to do a PDF document, for example, you could change the output type here. We’ll come back to the YAML header later.
 
@@ -47,7 +47,7 @@ Another really useful feature of RMarkdown is you can embed numbers directly in 
 
 When you knit, this will save those two values under those names.
 
-19. Now type the sentence you want to include your numbers in. To add some r code, write it within backward apostrophes \`. Your sentence could be *The minimum number of passangers was \`r mincrimes\` and the maximum was \`r maxcrimes\`.*
+19. Now type the sentence you want to include your numbers in. To add some r code, write it within backward apostrophes \`. Your sentence could be *The minimum number of crimes was \`r mincrimes\` and the maximum was \`r maxcrimes\`.*
 20. Click Knit - you’ll see your new sentence containing the numbers.
 
 We’re more interested in finding out what the latest value is. We’ll use a package called dplyr to get a function called last(), which gets the last value in a table.
@@ -61,7 +61,9 @@ We’re more interested in finding out what the latest value is. We’ll use a p
 *latestcrimes <- last(crimedata$crimes)*
 
 24. Add a sentence for your new numbers, e.g. *In the latest year (\`r latestyear\`) there were \`r latestcrimes\` crimes.*
-25. Knit again - you’ll see your new sentence at the end!
+25. Knit agaoutput:*
+  *word_document:*
+    *reference_docx: mystyles.docx*in - you’ll see your new sentence at the end!
 
 The document you have doesn’t quite look like our bulletins do. Rather than do all your formatting in Word, you can create a styles template document in a few minutes, that your RMarkdown will use for formatting. I’ve already created one which fits the JSAS style template, saved in this repo, called mystyles.docx.
 
