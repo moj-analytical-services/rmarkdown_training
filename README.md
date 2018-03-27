@@ -21,25 +21,21 @@ You’ll see there are two different types of section in the file, an example ha
 
 3. Save the RMD file in the folder you have put the data in (or where you've cloned this repo).
 4. Delete everything below the first code chunk (the ‘setup’ chunk) so we can start our own document.
-5. We’re going to install a package called readr. One of the best things about R is the collection of packages that people across the world have made: groups of functions that you can download and use yourself. Readr is used for reading in files, in our case we’ll use it to get the csv. In the setup chunk, type *library(readr)*. If you get an error, run *install.packages("readr")* in the console
-6. In the setup chunk, type *crimedata <- read_csv(“crimes.csv”)*. This will load the data when we create our output. We have assigned it to the name ‘crimes’. If you want to test a chunk, click the green play button at the top right of it. In this case, clicking that means you'll see 'crimes' appear in your environment
-7. Let’s write a chapter. You can create a heading by putting # before some text. Let’s make a chapter by writing *# Trend over time*
-8. Let’s see what our output document looks like. If you click “Knit”, it will run everything in your file and create a Word document for you. Open/download this to have a look: you should have a title, name and date, followed by the heading you’ve just made.
-9. Write some normal text below your heading, for example *over time, the number of crimes has changed.*
-10. Let’s add a chart to show the trend. You can create a new code chunk by typing CTRL+ALT+I (or clicking Insert -> R). After where it says r, type *echo=FALSE* to prevent the code appearing in your output document.
-11. We’ll use another popular package to make a chart. In your setup chunk, type *library(ggplot2)*.
-12. Go back to your new chunk at the bottom. Type *ggplot(crimedata, aes(year, crimes)) + geom_point()*. This tells ggplot which data (crimedata) to use, and which variables (year, crimes) to plot, and how to plot them (line). (If you don't want to use ggplot2, you can just use plot(crimedata)).
-13. Try knitting your document again. You should see the text and chart you’ve just added.
-14. You’ll notice that the y axis doesn’t start at 0! Let’s fix that. Add  *+ expand_limits(y=0)* to your ggplot line. Knit again and you’ll see the axis now starts at 0.
-15. You’ll also notice that the graph is quite large. You can edit the size at the start of the chunk within the curly braces, type: *fig.height = 3, fig.width = 6*
+5. In the setup chunk, type *crimedata <- read.csv(“crimes.csv”)*. This will load the data when we create our output. We have assigned it to the name ‘crimes’. If you want to test a chunk, click the green play button at the top right of it. In this case, clicking that means you'll see 'crimes' appear in your environment
+6. Let’s write a chapter. You can create a heading by putting # before some text. Let’s make a chapter by writing *# Trend over time*
+7. Let’s see what our output document looks like. If you click “Knit”, it will run everything in your file and create a Word document for you. Open/download this to have a look: you should have a title, name and date, followed by the heading you’ve just made.
+8. Write some normal text below your heading, for example *over time, the number of crimes has changed.*
+9. Let’s add a chart to show the trend. You can create a new code chunk by typing CTRL+ALT+I (or clicking Insert -> R). After where it says r, type *echo=FALSE* to prevent the code appearing in your output document.
+10. Go back to your new chunk at the bottom. Type *plot(crimedata).
+11. Try knitting your document again. You should see the text and chart you’ve just added.
 
 Another really useful feature of RMarkdown is you can embed numbers directly in to the text. These could be calculated directly from your data source, rather than copy and pasted from Excel or SAS output.
 
-16. Add another heading: *# Key figures*
+12. Add another heading: *# Key figures*
 
-17. Create another code chunk (CTRL+ALT+I or Insert -> R). Remember to put *echo = FALSE*
+13. Create another code chunk (CTRL+ALT+I or Insert -> R). Remember to put *echo = FALSE*
 
-18. Let’s give R two values that we want to include in the text. We could write this directly in to the text, but if they don’t work then you get more informative error messages from writing things in code chunks. In the chunk type:
+14. Let’s give R two values that we want to include in the text. We could write this directly in to the text, but if they don’t work then you get more informative error messages from writing things in code chunks. In the chunk type:
 
 *maxcrimes <- max(crimedata$crimes)*
 
@@ -47,37 +43,44 @@ Another really useful feature of RMarkdown is you can embed numbers directly in 
 
 When you knit, this will save those two values under those names.
 
-19. Now type the sentence you want to include your numbers in. To add some r code, write it within backward apostrophes \`. Your sentence could be *The minimum number of crimes was \`r mincrimes\` and the maximum was \`r maxcrimes\`.*
-20. Click Knit - you’ll see your new sentence containing the numbers.
+15. Now type the sentence you want to include your numbers in. To add some r code, write it within backward apostrophes \`. Your sentence could be *The minimum number of crimes was \`r mincrimes\` and the maximum was \`r maxcrimes\`.*
+16. Click Knit - you’ll see your new sentence containing the numbers.
 
-We’re more interested in finding out what the latest value is. We’ll use a package called dplyr to get a function called last(), which gets the last value in a table.
+We’re more interested in finding out what the latest value is. We’ll use a package called dplyr to get a function called last(), which gets the last value in a table. Packages are bits of code (functions) written by somebody else and bundled up. We could write it all from scratch ourselves, but someone has already done the work for us, so let's use it!
 
-21. Create a new code chunk, remember *echo=FALSE*. In your setup chunk at the top, type *library(dplyr)*.
-22. Arrange crime data by year: *crimedata <- arrange(crimedata, year)*
-23. Get the latest year and the latest value:
+17. Create a new code chunk, remember *echo=FALSE*. In your setup chunk at the top, type *library(dplyr)*.
+18. Arrange crime data by year: *crimedata <- arrange(crimedata, year)*
+19. Get the latest year and the latest value:
 
 *latestyear <- last(crimedata$year)*
 
 *latestcrimes <- last(crimedata$crimes)*
 
-24. Add a sentence for your new numbers, e.g. *In the latest year (\`r latestyear\`) there were \`r latestcrimes\` crimes.*
-25. Knit agaoutput:*
-  *word_document:*
-    *reference_docx: mystyles.docx*in - you’ll see your new sentence at the end!
+20. Add a sentence for your new numbers, e.g. *In the latest year (\`r latestyear\`) there were \`r latestcrimes\` crimes.*
+21. Knit again - you’ll see your new sentence at the end!
 
 The document you have doesn’t quite look like our bulletins do. Rather than do all your formatting in Word, you can create a styles template document in a few minutes, that your RMarkdown will use for formatting. I’ve already created one which fits the JSAS style template, saved in this repo, called mystyles.docx.
 
-26. In your YAML header, amend slightly so it says:
+22. In your YAML header, amend slightly so it says:
 *output:*
   *word_document:*
     *reference_docx: mystyles.docx*
-27. Click ‘Knit’. You should now have a document with the right fonts, and a header which looks more like the JSAS bulletins.
+23. Click ‘Knit’. You should now have a document with the right fonts, and a header which looks more like the JSAS bulletins.
 
 
 The last thing we’ll look at is what you’d do if you had new data, for example if an error got fixed, or if you’re producing the next quarter’s bulletin. "crime2.csv" has an extra row/year of data.
 
-28. Change the data source in your setup chunk to “crime2.csv”.
-29. Click Knit. You’ll see the values have been updated!
+24. Change the data source in your setup chunk to “crime2.csv”.
+25. Click Knit. You’ll see the values have been updated!
 
 A useful cheatsheet:
 https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf
+
+## Summary
+- Seen some of the benefits of RMarkdown: embed numbers directly in to text, reduce chance of error, reduce repetitive tasks.  
+- Open source - free and can use other peoples packages . 
+- Packages: we can/are developing one within JSAS (Phil and the coding standards group) so we can reduce duplication e.g. functions to create formatted charts. 
+- Hopefully got a taste for what these tools are and how your team will be using them . 
+- Packages: we can/are developing one within JSAS (Phil and the coding standards group) so we can reduce duplication e.g. functions to create formatted charts. 
+- Git session in a few weeks where you'll see how to use the version control software from within the RStudio interface (not possible with SAS) . 
+- Questions
