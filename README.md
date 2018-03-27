@@ -1,7 +1,7 @@
 # rmarkdown_training
 Short training session on RMarkdown, for JSAS, August 2017.
 
-RMarkdown is a way to write reproducible documents. You can use it to embed R code and calculations in to Word, PDF, HTML documents, or slideshows. These steps teach you how to make a report, and you’ll see how it could be used to produce a statistical bulletin. Actions for you are numbered.
+RMarkdown is a way to write reproducible documents. You can use it to embed R code and calculations in to Word, PDF, HTML documents, or slideshows. There are a number of benefits in using this software to produce regular reports. You'll see that we can reduce the chance of error as we don't need to copy and paste between our data and Word output, and you'll see that wrapping the analysis up with the text makes it much more reproducible and transparent. These steps teach you how to make a report, and you’ll see how it could be used to produce a statistical bulletin. Actions for you are numbered.
 
 Before you start, make sure 'mystyles.docx', 'crimedata.csv' and 'crimedata2.csv' are all in the same folder, preferably a new folder.
 
