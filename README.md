@@ -77,10 +77,8 @@ A useful cheatsheet:
 https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf
 
 ## Summary
-- Seen some of the benefits of RMarkdown: embed numbers directly in to text, reduce chance of error, reduce repetitive tasks.  
+- Seen some of the benefits of RMarkdown: embed numbers directly in to text, reduce chance of error, reduce repetitive tasks . 
 - Open source - free and can use other peoples packages . 
-- Packages: we can/are developing one within JSAS (Phil and the coding standards group) so we can reduce duplication e.g. functions to create formatted charts. 
-- Hopefully got a taste for what these tools are and how your team will be using them . 
-- Packages: we can/are developing one within JSAS (Phil and the coding standards group) so we can reduce duplication e.g. functions to create formatted charts. 
+- Packages: can reduce duplication e.g. functions to create formatted charts . 
 - Git session available too where you'll see how to use the version control software from within the RStudio interface (not possible with SAS) . 
 - Questions
