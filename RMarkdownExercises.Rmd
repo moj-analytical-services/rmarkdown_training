@@ -16,10 +16,11 @@ crimedata <- read.csv("crimedata.csv")
 ```{r echo=FALSE, include=FALSE}
 library(dplyr)
 crimedata <- arrange(crimedata,year)
+mincrimes <- min(crimedata$crimes)
 maxcrimes <- max(crimedata$crimes)
 ```
 
-## Exercises
+# Exercises
 
 Recreate the following plot and text using what you have learnt in this training. You may find the cheatsheet and help window useful. Check your code works by swapping between the two data sets as before. 
 
@@ -32,12 +33,17 @@ plot(crimedata,type="l",main="Total number of Crimes per year", xlab = "Year", y
 firstyear <- first(crimedata$year)
 latestyear <- last(crimedata$year)
 meancrimes <- round(mean(crimedata$crimes), digits = 1)
+mediancrimes <- median(crimedata$crimes)
 ```
 
+*Crimes data is available from `r firstyear` to `r latestyear`.*
 
-**For this crimes statistic we have data from `r firstyear` to `r latestyear`.**
+# Crimes summary statistics
 
-*The mean number of crimes per year across this period was `r meancrimes`.* 
+* **Across this period;**
+      + *The mean number of crimes per year was `r meancrimes`.* 
+      + *The median number of crimes per year `r mediancrimes`.*
+      + *The number of crimes per year varied from `r mincrimes` to `r maxcrimes`.*
 
 
 
