@@ -95,3 +95,13 @@ https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf
 - Packages: can reduce duplication e.g. functions to create formatted charts. 
 - Git session available too where you'll see how to use the version control software from within the RStudio interface (not possible with SAS). 
 - Questions
+
+## Exercises
+
+Open the RMarkdownExercises.docx file in Word. You can do this by downloading it from the github repository or from the R files window. 
+
+1. Create the "Total number of Crimes per year" plot, you may find ?plot useful. 
+2. Add in the line of italic text, setting up the first and last year in R code.
+3. Add in the next title using the mystyles document to check which header to use. Use the cheatsheet to format the bullet points as in the example and R code to set up the mean and median number of crimes. 
+
+
