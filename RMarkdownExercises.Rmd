@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 crimedata <- read.csv("crimedata.csv")
 ```
 
-# Exercises
+## Exercises
 
 Recreate the following plot and text using what you have learnt in this training. You may find the cheatsheet and help window useful. Check your code works by swapping between the two data sets as before. 
 
