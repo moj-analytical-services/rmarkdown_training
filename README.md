@@ -1,5 +1,5 @@
 # rmarkdown_training
-Short training session on RMarkdown, for JSAS, August 2017.
+Short training session on RMarkdown.
 
 RMarkdown is a way to write reproducible documents. You can use it to embed R code and calculations in to Word, PDF, HTML documents, or slideshows. There are a number of benefits in using this software to produce regular reports. You'll see that we can reduce the chance of error as we don't need to copy and paste between our data and Word output, and you'll see that wrapping the analysis up with the text makes it much more reproducible and transparent. These steps teach you how to make a report, and you’ll see how it could be used to produce a statistical bulletin. Actions for you are numbered.
 
@@ -33,7 +33,7 @@ You’ll see there are two different types of section in the file, an example ha
 
 9. Let’s add a chart to show the trend. You can create a new code chunk by typing CTRL+ALT+I (or clicking Insert -> R). After where it says r, type *,echo=FALSE* to prevent the code appearing in your output document.
 
-10. Go back to your new chunk at the bottom. Type *plot(crimedata)*.
+10. Go back to your new chunk at the bottom. Type *ggplot(crimedata, aes(year, crimes)) + geom_line() + expand_limits(y=c(0,200))*.
 
 11. Try knitting your document again. You should see the text and chart you’ve just added.
 

@@ -21,7 +21,7 @@ Over time, the number of crimes has changed.
 
 ```{r echo = FALSE, fig.height = 3, fig.width = 6}
 ggplot(crimedata, aes(year, crimes)) + geom_line() +
-  expand_limits(y=0)
+  expand_limits(y=c(0,200))
 ```
 
 # Key figures
