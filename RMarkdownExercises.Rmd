@@ -12,37 +12,37 @@ knitr::opts_chunk$set(echo = TRUE)
 crimedata <- read.csv("crimedata.csv")
 ```
 
-
-```{r echo=FALSE, include=FALSE}
-library(dplyr)
-crimedata <- arrange(crimedata,year)
-mincrimes <- min(crimedata$crimes)
-maxcrimes <- max(crimedata$crimes)
-```
-
 # Exercises
 
 Recreate the following plot and text using what you have learnt in this training. You may find the cheatsheet and help window useful. Check your code works by swapping between the two data sets as before. 
 
 ```{r echo=FALSE}
+library(ggplot2)
+ggplot(crimedata, aes(year, crimes)) + geom_line(colour="blue") + expand_limits(y=c(0,200)) + ggtitle("Total number of crimes per year")
 
-plot(crimedata,type="l",main="Total number of Crimes per year", xlab = "Year", ylab = "Crimes", ylim=c(0,maxcrimes)) 
+```
+```{r echo = FALSE, include=FALSE}
 
-#type="l" specifies line graph, main specifies title, x(y)lab specify x(y) axes titles, ylim specifies range of y axis i.e. 0 - max value
-
+library(dplyr)
+crimedata <- arrange(crimedata,year)
 firstyear <- first(crimedata$year)
 latestyear <- last(crimedata$year)
-meancrimes <- round(mean(crimedata$crimes), digits = 1)
-mediancrimes <- median(crimedata$crimes)
 ```
 
-*Crimes data is available from `r firstyear` to `r latestyear`.*
+*Crime data is available from `r firstyear` to `r latestyear`.*
 
-# Crimes summary statistics
+```{r echo=FALSE, include=FALSE}
+meancrimes <- round(mean(crimedata$crimes), digits = 1)
+mediancrimes <- median(crimedata$crimes)
+mincrimes <- min(crimedata$crimes)
+maxcrimes <- max(crimedata$crimes)
+```
+
+## Crime summary statistics
 
 * **Across this period;**
-      + *The mean number of crimes per year was `r meancrimes`.* 
-      + *The median number of crimes per year `r mediancrimes`.*
+      + *The mean number of crimes was `r meancrimes`.* 
+      + *The median number of crimes was `r mediancrimes`.*
       + *The number of crimes per year varied from `r mincrimes` to `r maxcrimes`.*
 
 

@@ -100,8 +100,9 @@ https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf
 
 Open the RMarkdownExercises.docx file in Word. You can do this by downloading it from the github repository or from the R files window. 
 
-1. Create the "Total number of Crimes per year" plot, you may find ?plot useful. 
-2. Add in the line of italic text, setting up the first and last year in R code.
-3. Add in the next title using the mystyles document to check which header to use. Use the cheatsheet to format the bullet points as in the example and R code to set up the mean and median number of crimes. 
+1. Create the "Total number of Crimes per year" plot (using the crimedata.csv dataset). This is the same plot as shown in the course but you will need to change the colour of the line to blue and add the title (you may find ?ggplot and ?ggtitle useful). 
+2. Add in the line of italic text, setting up the first and last year in a code chunk.
+3. Add in the next title "Crime summary statistics" using the mystyles document to check which header to use. 
+4. Use the cheatsheet to format the bullet points as in the example and set up a code chunk to calculate the mean, median, minimum and maximum number of crimes. 
 
 
