@@ -1,13 +1,17 @@
 # rmarkdown_training
 Short training session on RMarkdown.
 
+The aim of this training session is to give a brief introduction to the functionality of R markdown and its benefits.
+
+By the end of this session you should be able to produce an R markdown word document using R Studio.
+
 RMarkdown is a way to write reproducible documents. You can use it to embed R code and calculations in to Word, PDF, HTML documents, or slideshows. There are a number of benefits in using this software to produce regular reports. You'll see that we can reduce the chance of error as we don't need to copy and paste between our data and Word output, and you'll see that wrapping the analysis up with the text makes it much more reproducible and transparent. These steps teach you how to make a report, and you’ll see how it could be used to produce a statistical bulletin. Actions for you are numbered.
 
 Before you start, make sure 'mystyles.docx', 'crimedata.csv' and 'crimedata2.csv' are all in the same folder, preferably a new folder.
 
 1. Open RStudio
 
-This software gives a more user friendly way of creating work in R, you can see: a file explorer; a console to run R script in. You also have your environment, which is where objects you create, such as variables or tables will appear. Then you also have a window to create and save scripts of R code or RMarkdown files.
+This software gives a more user-friendly way of creating work in R, you can see: a file explorer; a console to run R script in. You also have your environment, which is where objects you create, such as variables or tables will appear. Then you also have a window to create and save scripts of R code or RMarkdown files.
 
 2. Create an RMarkdown file. Click ‘File’ -> ‘New File’ -> ‘R Markdown’ -> Enter the title “Crime stats" and your name -> Choose ‘Word’ or click on New icon then ‘R Markdown’ and follow the same instructions.
 
@@ -23,7 +27,7 @@ You’ll see there are two different types of section in the file, an example ha
 
 4. Delete everything below the first code chunk (the ‘setup’ chunk) so we can start our own document.
 
-5. In the setup chunk, type *library(readr)* then on the next line *crimedata <- read_csv(“crimedata.csv”)*. This will load the data when we create our output. We have assigned it to the name ‘crimes’. If you want to test a chunk, click the green play button at the top right of it. In this case, clicking that means you'll see 'crimes' appear in your environment.
+5. In the setup chunk, type *library(readr)* then on the next line *crimedata <- read_csv(“crimedata.csv”)*. This will load the data when we create our output. We have assigned it to the name ‘crimedata’. If you want to test a chunk, click the green play button at the top right of it. In this case, clicking that means you'll see 'crimedata' appear in your environment.
 
 6. Let’s write a chapter. You can create a heading by putting # before some text. Let’s make a chapter by writing *# Trend over time*
 
@@ -78,7 +82,7 @@ The document you have doesn’t quite look like our bulletins do. Rather than do
     
 23. Click ‘Knit’. You should now have a document with the right fonts, and a header which looks more like the JSAS bulletins. To call the different headers in your styles template document you use a different number of hashtags at the start of your headers e.g. 1 hashtag = header 1 and 3 hashtags=3 headers. For example, you can add a heading (heading 3 from the styles template) called latest figures before the text in step 20 *### Latest figures*.
 
-24. If you want to change any numbers or words in your text to bold or italic you need to use a single asterisk either side of your number or text for bold or a double asterisk for Italic. You can try this on one of your figures or text in your RMarkdown.
+24. If you want to change any numbers or words in your text to bold or italic you need to use a single asterisk either side of your number or text for italic or a double asterisk for bold. You can try this on one of your figures or text in your RMarkdown.
 
 The last thing we’ll look at is what you’d do if you had new data, for example if an error got fixed, or if you’re producing the next quarter’s bulletin. "crimedata2.csv" has an extra row/year of data.
 
@@ -91,7 +95,7 @@ https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf
 
 ## Summary
 - Seen some of the benefits of RMarkdown: embed numbers directly in to text, reduce chance of error and reduce repetitive tasks. 
-- Open source - free and can use other peoples packages. 
+- Open source - free and can use other people's packages. 
 - Packages: can reduce duplication e.g. functions to create formatted charts. 
 - Git session available too where you'll see how to use the version control software from within the RStudio interface (not possible with SAS). 
 - Questions
