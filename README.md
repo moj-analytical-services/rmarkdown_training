@@ -1,6 +1,8 @@
 # rmarkdown_training
 Short training session on RMarkdown.
 
+## Part 1: The different formats available
+
 The aim of this training session is to give a brief introduction to the functionality of R markdown and its benefits.
 
 By the end of this session you should be able to produce an R markdown word document using R Studio.
@@ -25,19 +27,23 @@ You’ll see there are two different types of section in the file, an example ha
 
 3. Save the RMD file in the folder you have put the data in (or where you've cloned this repo).
 
+## Part 2: Structure - adding headers and code chunks
+
 4. Delete everything below the first code chunk (the ‘setup’ chunk) so we can start our own document.
 
-5. In the setup chunk, type *library(readr)* then on the next line *crimedata <- read_csv(“crimedata.csv”)*. This will load the data when we create our output. We have assigned it to the name ‘crimedata’. If you want to test a chunk, click the green play button at the top right of it. In this case, clicking that means you'll see 'crimedata' appear in your environment.
+5. In the setup chunk, type *library(readr)* then on the next line *crimedata <- read_csv(“crimedata.csv”)*. This will load the data when we create our output. We have assigned it to the name ‘crimedata’. If you want to test a chunk, click the green play button at the top right of it. In this case, clicking that means you'll see 'crimedata' appear in your environment. In this setup chunk, also type *library(ggplot2)* as we will be using this package later. 
 
 6. Let’s write a chapter. You can create a heading by putting # before some text. Let’s make a chapter by writing *# Trend over time*
 
-7. Let’s see what our output document looks like. If you click “Knit”, it will run everything in your file and create a Word document for you. Open/download this to have a look: you should have a title, name and date, followed by the heading you’ve just made.
+7. Write some normal text below your heading, for example *over time, the number of crimes has changed.*
 
-8. Write some normal text below your heading, for example *over time, the number of crimes has changed.*
+8. Let’s see what our output document looks like. If you click “Knit”, it will run everything in your file and create a Word document for you. Open/download this to have a look: you should have a title, name and date, followed by the heading you’ve just made.
 
-9. Let’s add a chart to show the trend. You can create a new code chunk by typing CTRL+ALT+I (or clicking Insert -> R). After where it says r, type *,echo=FALSE* to prevent the code appearing in your output document.
+## Part 3: Content – embedding numbers and charts into RMarkdown text
 
-10. Go back to your new chunk at the bottom. Type *ggplot(crimedata, aes(year, crimes)) + geom_line() + expand_limits(y=c(0,200))*.
+9. Let’s add a chart to show the trend. You can create a new code chunk by typing CTRL+ALT+I (or clicking Insert -> R) or Cmd+Option+I for Macbooks. After where it says r, type *,echo=FALSE* to prevent the code appearing in your output document.
+
+10. Go back to your new chunk at the bottom. Type *ggplot(crimedata, aes(year, crimes)) + geom_line() + expand_limits(y=c(0,200))*. 
 
 11. Try knitting your document again. You should see the text and chart you’ve just added.
 
@@ -73,12 +79,15 @@ We’re more interested in finding out what the latest value is. We’ll use a p
 
 21. Knit again - you’ll see your new sentence at the end!
 
+## Part 4: Formatting - using a styles template or formatting from the RMarkdown cheatsheet
+
 The document you have doesn’t quite look like our bulletins do. Rather than do all your formatting in Word, you can create a styles template document in a few minutes, that your RMarkdown will use for formatting. There is already a styles document created which fits the JSAS style template, saved in this repo, called mystyles.docx.
 
 22. In your YAML header, amend slightly so it says:
 *output:*
   *word_document:*
     *reference_docx: mystyles.docx*
+(Make sure that you start a new line after each colon and use the tab on each new line)
     
 23. Click ‘Knit’. You should now have a document with the right fonts, and a header which looks more like the JSAS bulletins. To call the different headers in your styles template document you use a different number of hashtags at the start of your headers e.g. 1 hashtag = header 1 and 3 hashtags=3 headers. For example, you can add a heading (heading 3 from the styles template) called latest figures before the text in step 20 *### Latest figures*.
 
@@ -100,7 +109,7 @@ https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf
 - Git session available too where you'll see how to use the version control software from within the RStudio interface (not possible with SAS). 
 - Questions
 
-## Exercises
+## Part 5: Exercises
 
 Open the RMarkdownExercises.docx file in Word. You can do this by downloading it from the github repository or from the R files window. 
 
