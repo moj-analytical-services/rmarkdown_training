@@ -1,6 +1,16 @@
 # rmarkdown_training
 Short training session on RMarkdown.
 
+## Contents
+
+- [Part 1: The different formats available](#heading-1)
+- [Part 2: Structure - adding headers and code chunks](#heading-2)
+- [Part 3: Content – embedding numbers and charts into RMarkdown text](#heading-3)
+- [Part 4: Formatting - using a styles template or formatting from the RMarkdown cheatsheet](#heading-4)
+- [Summary](#heading-5)
+- [Part 5: Exercises](#heading-6)
+- [Additional resources and contacts](#heading-7)
+
 ## Part 1: The different formats available
 
 The aim of this training session is to give a brief introduction to the functionality of R markdown and its benefits.
@@ -118,4 +128,8 @@ Open the RMarkdownExercises.docx file in Word. You can do this by downloading it
 3. Add in the next title "Crime summary statistics" using the mystyles document to check which header to use. 
 4. Use the cheatsheet to format the bullet points as in the example and set up a code chunk to calculate the mean, median, minimum and maximum number of crimes. 
 
+## Additional resources and contacts
 
+You can also work through the training by yourself by watching recordings of it [here](https://web.microsoftstream.com/channel/aa3cda5d-99d6-4e9d-ac5e-6548dd55f52a)
+
+Please contact [Georgina Eaton](georgina.eaton4@justice.gov.uk) if you have any questions.
