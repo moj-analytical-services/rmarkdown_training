@@ -1,8 +1,7 @@
 # rmarkdown_training
 An introduction to RMarkdown. This training is suitable for those who have completed the [Intro R training](https://github.com/moj-analytical-services/IntroRTraining) or have at least reached an equivalent standard to having done this.
 
-You can work through this yourself by either reading the below or by watching recordings of it [here](https://web.microsoftstream.com/channel/aa3cda5d-99d6-4e9d-ac5e-6548dd55f52a)  
-If you do this please leave feedback about the material [here](https://airtable.com/shr9u2OJB2pW8Y0Af)  
+This training session is run in person/over Teams every few months. Alternatively, you can go through this material in your own time - you can find recordings of a previous session [here](https://web.microsoftstream.com/channel/aa3cda5d-99d6-4e9d-ac5e-6548dd55f52a). See [Remote learning](#remote-learning) for more tips on going through this material in your own time. If you work through the material by yourself please leave feedback about the material [here](https://airtable.com/shr9u2OJB2pW8Y0Af).  
 
 Please contact [Georgina Eaton](georgina.eaton4@justice.gov.uk) if you have any questions including when the next classroom based session will be held.
 
