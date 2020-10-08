@@ -1,5 +1,5 @@
 # rmarkdown_training
-An introduction to RMarkdown. 
+An introduction to RMarkdown. This training is suitable for those who have completed the [Intro R training](https://github.com/moj-analytical-services/IntroRTraining) or have at least reached an equivalent standard to having done this.
 
 You can work through this yourself by either reading the below or by watching recordings of it [here](https://web.microsoftstream.com/channel/aa3cda5d-99d6-4e9d-ac5e-6548dd55f52a)  
 If you do this please leave feedback about the material [here](https://airtable.com/shr9u2OJB2pW8Y0Af)  
