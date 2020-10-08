@@ -1,5 +1,10 @@
 # rmarkdown_training
-Short training session on RMarkdown.
+An introduction to RMarkdown. 
+
+You can work through this yourself by either reading the below or by watching recordings of it [here](https://web.microsoftstream.com/channel/aa3cda5d-99d6-4e9d-ac5e-6548dd55f52a)  
+If you do this please leave feedback about the material [here](https://airtable.com/shr9u2OJB2pW8Y0Af)  
+
+Please contact [Georgina Eaton](georgina.eaton4@justice.gov.uk) if you have any questions including when the next classroom based session will be held.
 
 ## Contents
 
@@ -129,7 +134,5 @@ Open the RMarkdownExercises.docx file in Word. You can do this by downloading it
 4. Use the cheatsheet to format the bullet points as in the example and set up a code chunk to calculate the mean, median, minimum and maximum number of crimes. 
 
 ## Additional resources and contacts
-
-You can also work through the training by yourself by watching recordings of it [here](https://web.microsoftstream.com/channel/aa3cda5d-99d6-4e9d-ac5e-6548dd55f52a)
 
 Please contact [Georgina Eaton](georgina.eaton4@justice.gov.uk) if you have any questions.
