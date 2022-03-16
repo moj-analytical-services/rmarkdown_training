@@ -1,0 +1,39 @@
+---
+title: "Crime stats"
+author: "Ciaran Lannin"
+date: "13/12/2021"
+output: word_document
+---
+
+{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(readr)
+crimedata <- read_csv('crimedata.csv')
+library(ggplot2)
+
+
+# Trend over time
+over time the number of crimes has changed
+
+ r echo = FALSE, 
+ggplot(crimedata, aes(year, crimes)) + geom_line() +
+  expand_limits(y=c(0,200))
+ 
+ 
+ # Key figures
+
+```{r, echo = FALSE},
+maxcrimes <- max(crimedata$crimes)
+mincrimes <- min(crimedata$crimes)
+```
+ 
+The minimum number of crimes was `r mincrimes` and the maximum was `r maxcrimes`.
+
+
+
+
+  
+
+ 
+ 

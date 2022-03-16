@@ -19,10 +19,10 @@ crimedata <- read_csv("crimedata.csv")
 # Trend over time
 Over time, the number of crimes has changed.
 
-```{r echo = FALSE, fig.height = 3, fig.width = 6}
+r echo = FALSE, 
 ggplot(crimedata, aes(year, crimes)) + geom_line() +
   expand_limits(y=c(0,200))
-```
+
 
 # Key figures
 ```{r echo = FALSE}
