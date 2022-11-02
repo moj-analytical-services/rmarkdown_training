@@ -1,9 +1,11 @@
 # Introduction to RMarkdown
 This introduction to RMarkdown is suitable for those who have completed the [Intro R training](https://github.com/moj-analytical-services/IntroRTraining) or have at least reached an equivalent standard to having done this.
 
-It is run over MS Teams every six months or so. Alternatively, you can go through this material in your own time - you can find recordings of a previous session [here](https://web.microsoftstream.com/channel/aa3cda5d-99d6-4e9d-ac5e-6548dd55f52a). See [Remote learning](#remote-learning) for more tips on going through this material in your own time. If you work through the material by yourself please leave feedback about the material [here](https://airtable.com/shr9u2OJB2pW8Y0Af). 
+It is run over MS Teams every six months or so. Alternatively, you can go through this material in your own time - you can find recordings of a previous session [here](https://web.microsoftstream.com/channel/aa3cda5d-99d6-4e9d-ac5e-6548dd55f52a). If you work through the material by yourself please leave feedback about the material [here](https://airtable.com/shr9u2OJB2pW8Y0Af). 
 
-Before starting, it is recommended that you clone this repository into R Studio on the analytical platform, to be able to access supporting data files and templates.
+Before starting, it is recommended that you clone this repository into R Studio on the analytical platform, to be able to access supporting data files and templates. To do this:
+ - Clone this GitHub repository [following step 1 here](https://user-guidance.services.alpha.mojanalytics.xyz/github.html#r-studio)
+ - In the Console window in RStudio, enter this command to make sure you have the required packages installed: `renv::restore()`
 
 Please contact [Georgina Eaton](georgina.eaton4@justice.gov.uk) or [Aidan Mews](aidan.mews@justice.gov.uk) if you have any questions including when the next (virtual) classroom based session will be held or if you'd like to join the R Training Group.
 
