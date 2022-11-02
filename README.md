@@ -19,19 +19,19 @@ Please contact [Georgina Eaton](georgina.eaton4@justice.gov.uk) or [Aidan Mews](
 
 The aim of this training session is to give a brief introduction to the functionality of R markdown and its benefits.
 
-By the end of this session you should be able to produce an R markdown word document using R Studio.
+By the end of this session you should be able to produce an R markdown Word document using R Studio.
 
-RMarkdown is a way to write reproducible documents. You can use it to embed R code and calculations in to Word, PDF, HTML documents, or slideshows. There are a number of benefits in using this software to produce regular reports. You'll see that we can reduce the chance of error as we don't need to copy and paste between our data and Word output, and you'll see that wrapping the analysis up with the text makes it much more reproducible and transparent. These steps teach you how to make a report, and you’ll see how it could be used to produce a statistical bulletin. Actions for you are numbered.
+RMarkdown is a way to write reproducible documents. You can use it to embed R code and calculations into the production of Word, PDF, HTML documents, or slideshows. There are a number of benefits in using this software to produce regular reports. You'll see that we can reduce the chance of error as we don't need to copy and paste between our data and our Word output document, and you'll see that wrapping the analysis up with the text makes it much more reproducible and transparent. These steps teach you how to make a basic report, and you’ll see how they could be used to produce a statistical bulletin. Actions for you are numbered.
 
 Before you start, make sure 'mystyles.docx', 'crimedata.csv' and 'crimedata2.csv' are all in the same folder, preferably a new folder.
 
 1. Open RStudio
 
-This software gives a more user-friendly way of creating work in R, you can see: a file explorer; a console to run R script in. You also have your environment, which is where objects you create, such as variables or tables will appear. Then you also have a window to create and save scripts of R code or RMarkdown files.
+This software gives a more user-friendly way of creating work in R. You can see: a file explorer; a console to run R script in. You also have your environment, which is where objects you create, such as variables or tables will appear. Then you also have a window to create and save scripts of R code or RMarkdown files.
 
 2. Create an RMarkdown file. Click ‘File’ -> ‘New File’ -> ‘R Markdown’ -> Enter the title “Crime stats" and your name -> Choose ‘Word’ or click on New icon then ‘R Markdown’ and follow the same instructions.
 
-You’ll notice you could have chosen PDF or HTML, and may want to in future, but for now use Word as this is the format most stats bulletins are in.
+You’ll notice you could have chosen PDF or HTML, and may want to do this in future.
 
 You should now have a file open. We’re going to edit this and create a pretend statistics publication.
 
