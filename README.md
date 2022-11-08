@@ -107,7 +107,7 @@ The document you have doesn’t quite look like our bulletins do. Rather than do
     *reference_docx: mystyles.docx*
 (Make sure that you start a new line after each colon and use the tab on each new line)
     
-23. Click ‘Knit’. You should now have a document with the right fonts, and a header which looks more like the DES bulletins. To call the different headers in your styles template document you use a different number of hashtags at the start of your headers e.g. 1 hashtag = header 1 and 3 hashtags=3 headers. For example, you can add a heading (heading 3 from the styles template) called latest figures before the text in step 20 *### Latest figures*.
+23. Click ‘Knit’. You should now have a document with the right fonts, and a header which looks more like the DES bulletins. To call the different headers in your styles template document you use a different number of hashtags at the start of your headers e.g. 1 hashtag = header 1 and 3 hashtags= header 3. For example, you can add a heading (heading 3 from the styles template) called latest figures before the text in step 20 *### Latest figures*.
 
 24. If you want to change any numbers or words in your text to bold or italic you need to use a single asterisk either side of your number or text for italic or a double asterisk for bold. You can try this on one of your figures or text in your RMarkdown.
 
